@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131221161934) do
+ActiveRecord::Schema.define(:version => 20131221181927) do
 
   create_table "doctors", :force => true do |t|
     t.string   "email"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(:version => 20131221161934) do
   add_index "doctors", ["email"], :name => "index_doctors_on_email", :unique => true
   add_index "doctors", ["reset_password_token"], :name => "index_doctors_on_reset_password_token", :unique => true
 
+  create_table "drugs", :force => true do |t|
+    t.string   "name"
+    t.text     "notes"
+    t.integer  "prescription_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "drugs", ["prescription_id"], :name => "index_drugs_on_prescription_id"
+
   create_table "patients", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -58,5 +68,16 @@ ActiveRecord::Schema.define(:version => 20131221161934) do
   add_index "patients", ["email"], :name => "index_patients_on_email", :unique => true
   add_index "patients", ["reset_password_token"], :name => "index_patients_on_reset_password_token", :unique => true
   add_index "patients", ["tc_no"], :name => "index_patients_on_tc_no", :unique => true
+
+  create_table "prescriptions", :force => true do |t|
+    t.string   "prescription_code"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "doctor_id"
+    t.integer  "patient_id"
+  end
+
+  add_index "prescriptions", ["doctor_id"], :name => "index_prescriptions_on_doctor_id"
+  add_index "prescriptions", ["patient_id"], :name => "index_prescriptions_on_patient_id"
 
 end

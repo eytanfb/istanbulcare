@@ -1,3 +1,8 @@
 <h1><%= @patient.full_name %></h1>
 
+<h3>Receteler</h3>
+<%= render @prescriptions %>
+
+<h3>Rontgenler</h3>
+
 <p><%= link_to "Cikis", destroy_patient_session_path, method: :delete, class: "btn btn-primary btn-small" %></p>

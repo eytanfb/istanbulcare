@@ -41,6 +41,7 @@ class DeviseCreatePatients < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :patients, :tc_no,                unique: true
     add_index :patients, :email,                :unique => true
     add_index :patients, :reset_password_token, :unique => true
     # add_index :patients, :confirmation_token,   :unique => true

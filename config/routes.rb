@@ -1,6 +1,4 @@
 Istanbulcare::Application.routes.draw do
-  
-  get "prescriptions/show"
 
   get "static_pages/home"
 
@@ -16,6 +14,8 @@ Istanbulcare::Application.routes.draw do
   devise_scope :patient do
     match "patients/:id" => "patients#show", as: :patient
   end
+  
+  match 'prescriptions/:id' => "prescriptions#show", as: :prescription
   
   root to: "static_pages#home"
 

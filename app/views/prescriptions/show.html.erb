@@ -1,2 +1,5 @@
-<h1>Prescriptions#show</h1>
-<p>Find me in app/views/prescriptions/show.html.erb</p>
+<h1><%= "#{@prescription.date} Tarihli Recete"  %></h1>
+
+<% @prescription.drugs.each do |drug| %>
+   <p><%= "#{drug.name} - #{drug.notes}" %></p>
+<% end %>

@@ -1,6 +1,8 @@
 <h1><%= @doctor.full_name %></h1>
 
-
+<%= simple_form_for :patient, html: { class: "form-horizontal" } do |f| %>
+  <%= f.input :tc_no, label: "Hasta TC Kimlik No", as: :string %>
+<% end %>
 
 
 <p><%= link_to "Cikis", destroy_doctor_session_path, method: :delete, class: "btn btn-primary btn-small" %></p>

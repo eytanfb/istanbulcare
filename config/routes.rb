@@ -1,4 +1,6 @@
 Istanbulcare::Application.routes.draw do
+  devise_for :patients
+
   get "static_pages/home"
 
   devise_for :doctors

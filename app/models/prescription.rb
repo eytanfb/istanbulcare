@@ -6,6 +6,8 @@
 #  prescription_code :string(255)
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  doctor_id         :integer
+#  patient_id        :integer
 #
 
 class Prescription < ActiveRecord::Base

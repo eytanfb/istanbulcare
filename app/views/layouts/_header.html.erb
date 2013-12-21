@@ -10,7 +10,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active">
-                        <a href="#" class="" contenteditable="false">Ana Sayfa</a>
+                        <%= link_to "Ana Sayfa", static_pages_home_path, class: "", contenteditable: "false" %>
                     </li>
                     
                     <%if doctor_signed_in?%>

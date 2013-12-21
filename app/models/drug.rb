@@ -10,7 +10,7 @@
 #  updated_at      :datetime         not null
 #
 
-class Drugs < ActiveRecord::Base
+class Drug < ActiveRecord::Base
   belongs_to :prescription
   attr_accessible :name, :notes
 end

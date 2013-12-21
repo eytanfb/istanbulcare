@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Istanbulcare</title>
+    <title>İstanbul Sağlık Hizmetleri</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= render partial: "layouts/header"%>
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
-    <%= yield %>
+   <div class="container-fluid">
+      <div class="row-fluid">
+          <%= render partial: "layouts/sidebar"%>
+          <div class="span7">
+            <%= yield %>
+          </div>
+      </div><!--rowFluid-->
+   </div>   
+    <%= render partial: "layouts/footer"%>
     <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

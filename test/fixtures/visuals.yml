@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  patient: 
+  type: 
+  image_url: MyString
+  date: 2013-12-22
+  notes: MyString
+
+two:
+  patient: 
+  type: 
+  image_url: MyString
+  date: 2013-12-22
+  notes: MyString

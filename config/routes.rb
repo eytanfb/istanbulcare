@@ -1,4 +1,6 @@
 Istanbulcare::Application.routes.draw do
+  get "doctors/show"
+
   devise_for :doctors
 
   # The priority is based upon order of creation:

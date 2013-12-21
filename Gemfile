@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 group :development do
   gem 'mysql2'
+  gem 'annotate'
+  gem 'thin'
 end
 
 group :production do

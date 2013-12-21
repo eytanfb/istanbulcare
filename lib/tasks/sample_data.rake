@@ -26,15 +26,19 @@ namespace :db do
                       password_confirmation: password)
     end
     
-    
-    
-    8.times do
+    20.times do
+      doctor_id = rand(99)+1
+      patient_id = rand(99)+1
+      doctor = Doctor.find doctor_id
+      patient = Patient.find patient_id
+      prescription = doctor.prescriptions.create!(patient_id: patient_id)
+      (rand(3)+1).times do
       name = ["sudafed", "benical", "augmentin", "aspirin", "viagra", "minoset", "bengay", "xanax"].sample.humanize
       notes = ["sabah ac karnina", "sabah tok karnina", "kahvaltidan sonra", "aksam yemeginden sonra 2 tane", "oglen tok karnina", "oglen ac karnina", "acikinca", "susayinca"].sample.humanize
-      prescription_id = rand(20)
-      Drug.create!(name: name,
-                   notes: notes,
-                   prescription_id: prescription_id)  
+      prescription.drugs.create!(name: name,
+                   notes: notes)  
+       end
     end
+    
   end
 end

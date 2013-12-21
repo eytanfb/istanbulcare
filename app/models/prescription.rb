@@ -16,6 +16,11 @@ class Prescription < ActiveRecord::Base
   
   before_create :create_prescription_code
   
+  belongs_to :doctor, :class_name => "Doctor", :foreign_key => "doctor_id"
+  belongs_to :patient, :class_name => "Patient", :foreign_key => "patient_id"
+  
+  attr_accessible :patient_id
+  
   private
   
   def create_prescription_code

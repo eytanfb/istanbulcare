@@ -1,21 +1,21 @@
-<h2>Kayit Ol</h2>
+<h2>Kayıt Ol</h2>
 
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :tc_no, label: "TC Kimlik No", as: :string, :required => true, :autofocus => true, input_html: { style: "width: 206px", maxlength: 11 } %>
-    <%= f.input :first_name, label: "Isim", :required => true %>
+    <%= f.input :first_name, label: "İsim", :required => true %>
     <%= f.input :last_name, label: "Soyad", :required => true %>
     <%= f.input :phone, label: "Telefon", :required => true %>
-    <%= f.input :specialization, label: "Uzmanlik", required: true %>
+    <%= f.input :specialization, label: "Uzmanlık", required: true %>
     <%= f.input :email, :required => true %>
-    <%= f.input :password, label: "Sifre", :required => true %>
-    <%= f.input :password_confirmation, label: "Sifre Onaylama", :required => true %>
+    <%= f.input :password, label: "Şifre", :required => true %>
+    <%= f.input :password_confirmation, label: "Şifre Onaylama", :required => true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Kayit Ol" %>
+    <%= f.button :submit, "Kayıt Ol" %>
   </div>
 <% end %>
 

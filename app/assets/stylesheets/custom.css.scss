@@ -9,7 +9,28 @@ body {
   }
 }
 
-/* uncomment this section to make the sidebar un-pin
+#proper-sidebar
+{
+  position: fixed;
+  left: 10px;
+  margin-top: 45px;
+}
+
+.form-actions
+{
+  background-color: white;
+  border-style: none;
+  margin-left: 50px;
+}
+
+#sign-in-button
+{
+  margin-left: 40px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* uncomment this section to make the sidebar un-pin*/
 .affix-top {
 	top:60px;
     position:fixed;
@@ -18,7 +39,7 @@ body {
 .affix {
     position:static;
 }
-*/
+
 
 .affix-top {
 	top:60px;

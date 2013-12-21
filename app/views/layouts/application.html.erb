@@ -11,8 +11,8 @@
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
-   <div class="container-fluid">
-      <div class="row-fluid">
+   <div class="container">
+      <div class="row">
           <%= render partial: "layouts/sidebar"%>
           <div class="span7">
             <%= yield %>

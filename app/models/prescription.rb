@@ -11,7 +11,14 @@
 #
 
 class Prescription < ActiveRecord::Base
-  attr_accessible :prescription_code
   
   has_many :drugs
+  
+  before_create :create_prescription_code
+  
+  private
+  
+  def create_prescription_code
+    self.prescription_code = SecureRandom.hex(20)
+  end
 end

@@ -9,6 +9,24 @@ body {
   }
 }
 
+html
+{
+  height: 100%;
+}
+
+body
+{
+  min-height: 100%;
+}
+
+#footer-container
+{
+  width: 80%;
+  left: 10%;
+  position: fixed;
+  bottom: 0;
+}
+
 #proper-sidebar
 {
   position: fixed;
@@ -28,6 +46,42 @@ body {
   margin-left: 40px;
   margin-top: 0px;
   padding-top: 0px;
+}
+
+#contact-button
+{
+  float: right;
+}
+
+#user-name
+{
+  font-size: 15pt;
+  color: white;
+  float: right;
+  padding-top: 0px;
+
+}
+
+#username-nav-item
+{
+    float: right;
+    margin-right: 50px;
+
+}
+
+#exit-nav-item
+{
+    float: right;
+}
+
+.nav
+{
+  width: 83%;
+}
+
+.short-form
+{
+  margin-top: 40px;
 }
 
 /* uncomment this section to make the sidebar un-pin*/

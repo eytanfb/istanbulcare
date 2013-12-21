@@ -9,13 +9,24 @@
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#" class="" contenteditable="false">Ana Sayfa</a>
+                    <li class="active">
+                        <a href="#" class="" contenteditable="false">Ana Sayfa</a>
                     </li>
-                    <li><a href="#" class="" contenteditable="false">Kişisel Bilgilerim</a>
-                    </li>
-                    <li></li>
-                    <li><a href="#" class="" contenteditable="false">Example</a>
-                    </li>
+                    
+                    <%if doctor_signed_in?%>
+                        <li>
+                            <a href="#" class="" contenteditable="false">Kişisel Bilgilerim</a>
+                        </li>
+                             <li><a href="#" class="" contenteditable="false">Example</a>
+                        </li>
+                        <li id = "exit-nav-item">
+                            <%= link_to "Çıkış", destroy_doctor_session_path, method: :delete %>
+                        </li>
+                        <li id = "username-nav-item">
+                            <h4 id = "user-name"><%= current_doctor.full_name if doctor_signed_in? %></h4>
+                        </li>
+                        
+                    <%end%>
                 </ul>
             </div>
         </div>

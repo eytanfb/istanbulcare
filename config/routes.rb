@@ -1,5 +1,7 @@
 Istanbulcare::Application.routes.draw do
   
+  get "prescriptions/show"
+
   get "static_pages/home"
 
   devise_for :doctors

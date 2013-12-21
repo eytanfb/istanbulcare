@@ -21,6 +21,10 @@ class Prescription < ActiveRecord::Base
   
   attr_accessible :patient_id
   
+  def date
+    self.created_at.strftime("%d/%m/%Y")
+  end
+  
   private
   
   def create_prescription_code

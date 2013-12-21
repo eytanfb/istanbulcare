@@ -32,4 +32,6 @@ class Doctor < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :tc_no, :first_name, :last_name, :phone, :specialization
   
+  validates_length_of :tc_no, :within => 11..11, :on => :create, :message => "11 Hane Olmalidir"
+  
 end

@@ -9,6 +9,8 @@ group :development do
   gem 'mysql2'
   gem 'annotate'
   gem 'thin'
+  gem 'faker'
+  
 end
 
 group :production do

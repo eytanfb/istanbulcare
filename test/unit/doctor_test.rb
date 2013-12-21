@@ -19,7 +19,7 @@
 #  specialization         :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  tc_no                  :integer
+#  tc_no                  :string(255)
 #
 
 require 'test_helper'

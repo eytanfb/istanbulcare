@@ -5,6 +5,10 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.find params[:id]
   end
   
+  def search_patient
+    @patient = params[:patient][:tc_no]
+  end
+  
   private
   
   def after_sign_in_path_for(resource)

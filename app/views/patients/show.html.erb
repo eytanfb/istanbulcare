@@ -1,7 +1,7 @@
 <h1><%= @patient.full_name %></h1>
 
 <h3>Receteler</h3>
-<%= render @prescriptions %>
+<%= render partial: "prescriptions/prescription", collection: @prescriptions, as: :prescription %>
 
 <h3>Rontgenler</h3>
 

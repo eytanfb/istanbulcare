@@ -1,9 +1,12 @@
 Istanbulcare::Application.routes.draw do
+  devise_for :patients
+
   get "static_pages/home"
 
   devise_for :doctors
   
   devise_scope :doctor do
+    get "doctors/search_patient" => "doctors#search_patient", as: :search_patient
     match "doctors/:id" => "doctors#show", as: :doctor
   end
   

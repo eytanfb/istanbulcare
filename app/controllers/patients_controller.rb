@@ -7,6 +7,7 @@ class PatientsController < Devise::RegistrationsController
     @prescriptions = @patient.prescriptions
     @visuals = @patient.visuals.sort_by &:date
     @vaccines = @patient.vaccines.sort_by &:date
+    @operations = @patient.operations.sort_by &:date
   end
   
   private

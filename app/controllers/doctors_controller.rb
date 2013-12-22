@@ -12,6 +12,7 @@ class DoctorsController < ApplicationController
     @prescriptions = @patient.prescriptions.sort
     @visuals = @patient.visuals.sort_by &:date
     @vaccines = @patient.vaccines.sort_by &:date
+    @operations = @patient.operations.sort_by &:date
   end
   
   private

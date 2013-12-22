@@ -16,13 +16,20 @@
 /*Footer*/
 .footer-bar
 {
-	width: 100%;
-	position:bottom;
+  left: 4%;
+	width: 90%;
+  height: 55px;
+	position:fixed -1;
+  margin-bottom: 4px;
+
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 5px;
 }
 
 .footer-button
 {
-	margin-top: 12px;
+	margin-top: 8px;
 	margin-right: 40px;
 	right: 40%;
 }
@@ -31,6 +38,7 @@
 {
 	float: left;
 	margin-left: 40px;
+  margin-top: 10px;
 }
 
 /*END --- Footer*/
@@ -39,9 +47,20 @@
 /* Sidebar*/
 #proper-sidebar
 {
+  text-align: center;
   position: fixed;
   left: 30px;
-  margin-top: 45px;
+  top: 100px;
+  width: 155px;
+}
+
+.sidebar-item
+{
+  width: inherit;
+  font-weight: 400;
+  font-size: 14pt;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 /*END --- Sidebar*/
 

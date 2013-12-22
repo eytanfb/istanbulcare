@@ -59,7 +59,7 @@
 .section-title
 {
 	color: white;
-  height: 30px; 
+  height: 40px; 
   background-color: gray;
   padding-left: 10px;
   margin-top: 0px;
@@ -67,10 +67,30 @@
 
 }
 
-.section-box
+#section-box-one
 {
+  text-align: left;
   padding-top: 10px;
   border-radius: 6px;
+  width: inherit;
 }
+
+#section-box-two
+{
+  text-align: left;
+  padding-top: 10px;
+  border-radius: 6px;
+  width: inherit;
+}
+
+#section-box-three
+{
+  text-align: left;
+  padding-top: 10px;
+  border-radius: 6px;
+  width: inherit;
+}
+
+
 
 /*END --- Doctor view of patient*/

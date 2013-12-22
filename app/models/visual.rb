@@ -16,4 +16,8 @@ class Visual < ActiveRecord::Base
   belongs_to :patient
   attr_accessible :date, :image_url, :notes, :tip
   
+  def format_date
+    self.date.strftime("%d/%m/%Y")
+  end
+  
 end

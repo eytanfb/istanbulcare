@@ -2,20 +2,20 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.hidden_field :patient_id,  value: "#{@patient.id}" %>
+      
     <h3>Ilaclar</h3>
     <div id="drugs">
       <%= f.simple_fields_for :drugs do |drug| %>
          <%= render "drug_fields", f: drug %>
          <div class="links">
-           <%= link_to_add_association 'Ilac Ekle', f, :drugs %>
+           <%= link_to_add_association 'Ilac Ekle', f, :drugs, class: "btn btn-primary btn-small", style: "width: 49px" %>
          </div>
       <% end %>
     </div>
   </div>
   
   <div class="form-actions">
-    <%= f.submit "Olustur" %>
+    <%= f.submit "Olustur", class: "btn btn-primary" %>
     <%= hidden_field_tag :tc_no, params[:patient_tc_no] %>
   </div>
 <% end %>

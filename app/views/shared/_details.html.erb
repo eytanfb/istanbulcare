@@ -8,10 +8,10 @@
 	</div><!--well-->
 
 	<div id = "section-box-one" class="well">
-		<h3 class = "section-title">Röntgenler</h3>
+		<h3 class = "section-title">Gorseller</h3>
 		<%= render partial: "visuals/visual", collection: visuals, as: :visual %>
   		<div class = "add-patient-record">
-  			<%= link_to "Görsel Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  			<%= link_to "Görsel Ekle", new_visual_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
   		</div>
 	</div><!--well-->
 
@@ -19,7 +19,15 @@
 		<h3 class = "section-title">Aşılar</h3>
 		<%= render partial: "vaccines/vaccine", collection: vaccines, as: :vaccine %>
   		<div class = "add-patient-record">
-  			<%= link_to "Aşı Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  			<%= link_to "Aşı Ekle", new_vaccine_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  		</div>
+	</div><!--well-->
+  
+	<div id = "section-box-one" class="well">
+		<h3 class = "section-title">Operasyonlar</h3>
+		<%= render partial: "operations/operation", collection: operations, as: :operation %>
+  		<div class = "add-patient-record">
+  			<%= link_to "Operasyon Ekle", new_operation_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
   		</div>
 	</div><!--well-->
 </div>

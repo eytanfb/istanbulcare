@@ -1,2 +1,18 @@
-<h1>Vaccines#show</h1>
-<p>Find me in app/views/vaccines/show.html.erb</p>
+<div id = "general-section">
+    <h1 class = "visual-header"><%= "#{@vaccine.date} Tarihli Görüntü" %></h1>
+    <div id = "visual-type">
+        <div class = "info-title">Türü:</div>
+        <div><%= @vaccine.tip %></div>
+    </div>    
+    <div id="visuals-section">            
+        <div id ="visual-left-column">
+            <p class = "info-title">Bitis Tarihi: <%= @vaccine.expiration_date %></p>
+        </div>
+        <div id ="visual-right-column">
+             <p class = "info-title" >Açıklamalar</p>
+             <div> 
+                 <p id="explanations"><%= @vaccine.notes %>!</p>
+             </div>              
+        </div>      
+    </div>
+</div>

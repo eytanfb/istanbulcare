@@ -14,6 +14,6 @@
 
 <div class="well section-box">
 	<h3 class = "section-title">Asilar</h3>
-	<%= render partial: "vaccines/vaccine", collection: vaccine, as: :vaccine %>
+	<%= render partial: "vaccines/vaccine", collection: vaccines, as: :vaccine %>
   <%= link_to "Asi Ekle", "#", class: "btn btn-primary btn-small add-button" if doctor_signed_in? %>
 </div><!--well-->

@@ -18,6 +18,60 @@ body
 {
   min-height: 100%;
 }
+/*Visuals Section Detailed View*/
+h1
+{
+    text-align: center;
+    width: 510px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color:#dcdcdc;
+    font-weight: 700;
+    background-color: gray;
+    border-radius: 8px;
+}
+#general-section
+{
+    height: 880px;
+    border-style: solid;
+    border-color: red;
+}
+#visual-type
+{
+    border-style: solid;
+    border-color: blue;
+}
+#visuals-section
+{
+    height: 700px;
+    border-style: solid;
+    border-color: green;
+}
+#visual-left-column
+{
+    float: left;
+    margin-right: 10px;
+}
+#visual-right-column
+{
+    float:left;
+    margin-left: 10px;
+}
+.info-title
+{
+    margin-left: 10px;
+    font-weight: 600;
+    font-style: italic;
+}
+.visual-image
+{
+    margin-left: 10px;
+}
+#image-file
+{
+    width: 500px;
+}
+/*END -- Visuals Section Detailed View*/
 
 /*Doctor view of patient*/
 
@@ -55,16 +109,16 @@ body
   width: 300px;
   float: left;
 }
-.prescription-date
+.record-date
 {
   color: white;
-
   border-style: solid;
-  border-color: #007BA7 ;
-  border-radius: 10px;
+  border-color: #007BA7;
+  border-radius: 8px;
   font-size: 12pt;
   font-style: italic;
-  background-color: #007BA7 
+  background-color: #007BA7;
+  margin-right: 15px;
 }
 
 .section-title
@@ -89,7 +143,6 @@ body
   width: 80%;
   left: 10%;
   position:bottom;
-  bottom: 0;
 }
 
 #proper-sidebar

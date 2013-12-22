@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  patient_id :integer
-#  type       :string(255)
+#  tip        :string(255)
 #  image_url  :string(255)
 #  date       :date
 #  notes      :string(255)

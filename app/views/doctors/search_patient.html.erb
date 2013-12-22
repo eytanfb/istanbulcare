@@ -1,10 +1,10 @@
 <div id = "patient-page">
 	<div id = "patient-information">
 		<div class = "info-text">Hastanin Adi: </div> 
-		<div class = "patient-info"><%="#{@patient.full_name}" %></div> 
-		<div class = "info-text">Hastanin TC Kimlik Numarasi:</div> 
-		<div class = "patient-info"><%="#{@patient.tc_no}" %></div>
-	</div><!--patient-information-->
+    <div class = "patient-info"><%="#{@patient.full_name}" %></div> 
+    <div class = "info-text">Hastanin TC Kimlik Numarasi:</div> 
+    <div class = "patient-info"><%="#{@patient.tc_no}" %></div>
+  </div><!--patient-information-->
 
-	<%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals } %>
+  <%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals } %>
 </div><!--patient-page-->

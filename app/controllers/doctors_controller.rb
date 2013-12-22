@@ -1,20 +1,22 @@
 class DoctorsController < ApplicationController
   before_filter :authenticate_doctor!
-
+  before_filter :logout_other_user_if_logged_in
+  
   def show
     @doctor = Doctor.find params[:id]
   end
   
   def search_patient
-    @patient = Patient.find_by_tc_no params[:patient][:tc_no]
+    tc_no = params[:patient].present? && params[:patient][:tc_no].present? ? params[:patient][:tc_no] : params[:tc_no]
+    @patient = Patient.find_by_tc_no tc_no
     @prescriptions = @patient.prescriptions
     @visuals = @patient.visuals
   end
   
   private
   
-  def after_sign_in_path_for(resource)
-    doctor_path(resource)
+  def logout_other_user_if_logged_in
+    sign_out current_patient if current_patient && current_doctor_logged_in?
   end
 
 end

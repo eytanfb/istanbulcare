@@ -1,9 +1,11 @@
 <div class="well section-box">
 	<h3 class = "section-title">Reçeteler</h3>
 	<%= render partial: "prescriptions/prescription", collection: prescriptions, as: :prescription %>
+  <%= link_to "Recete Ekle", new_prescription_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small add-button" if doctor_signed_in? %>
 </div><!--well-->
 
 <div class="well section-box">
 	<h3 class = "section-title">Röntgenler</h3>
 	<%= render partial: "visuals/visual", collection: visuals, as: :visual %>
+  <%= link_to "Gorsel Ekle", "#", class: "btn btn-primary btn-small add-button" if doctor_signed_in? %>
 </div><!--well-->

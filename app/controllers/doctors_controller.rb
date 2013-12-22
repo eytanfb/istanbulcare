@@ -1,6 +1,7 @@
 class DoctorsController < ApplicationController
   before_filter :authenticate_doctor!
-
+  before_filter :logout_other_user_if_logged_in
+  
   def show
     @doctor = Doctor.find params[:id]
   end
@@ -13,8 +14,8 @@ class DoctorsController < ApplicationController
   
   private
   
-  def after_sign_in_path_for(resource)
-    doctor_path(resource)
+  def logout_other_user_if_logged_in
+    sign_out current_patient if current_patient && current_doctor_logged_in?
   end
 
 end

@@ -1,29 +1,31 @@
 <div class="span2">
   <!--sidebar-->
-  <div id = "proper-sidebar" class="sidebar-nav-fixed" data-spy="affix" data-offset-top="140">
-      <ul class="nav">
-          <hr style="margin: 0px; border-width: 3px">
-          <li>
-              <a href="#" class="sidebar-item">Reçeteler</a>
-          </li>
-          <hr style="margin: 0px; border-width: 3px">
-          <li>
-              <a href="#" class="sidebar-item" contenteditable="false">X-Rays</a>
-          </li>
-          <hr style="margin: 0px; border-width: 3px">
-          <li>
-              <a href="#" class="sidebar-item">Tahlil Sonuçları</a>
-          </li>
-          <hr style="margin: 0px; border-width: 3px">
-          <li>
-              <a href="#" class="sidebar-item">Aşılar</a>
-          </li>
-          <hr style="margin: 0px; border-width: 3px">
-          <li>
-              <a href="#" class="sidebar-item">Alerjiler</a>
-          </li>
-          <hr style="margin: 0px; border-width: 3px">
+  <% unless !(doctor_signed_in? ^ patient_signed_in?) && !current_page?(:controller => 'doctors', :action => 'show') %>
+    <div id = "proper-sidebar" class="sidebar-nav-fixed" data-spy="affix" data-offset-top="140">
+        <ul class="nav">
+            <hr style="margin: 0px; border-width: 3px">
+            <li>
+                <%= link_to "Reçeteler", doctor_signed_in? ? search_patient_path(tc_no: "#{@patient.id}") : current_patient, class: "sidebar-item", contenteditable: "false" %>
+            </li>
+            <hr style="margin: 0px; border-width: 3px">
+            <li>
+                <a href="#" class="sidebar-item" contenteditable="false">Görseller</a>
+            </li>
+            <hr style="margin: 0px; border-width: 3px">
+            <li>
+                <a href="#" class="sidebar-item">Tahlil Sonuçları</a>
+            </li>
+            <hr style="margin: 0px; border-width: 3px">
+            <li>
+                <a href="#" class="sidebar-item">Aşılar</a>
+            </li>
+            <hr style="margin: 0px; border-width: 3px">
+            <li>
+                <a href="#" class="sidebar-item">Alerjiler</a>
+            </li>
+            <hr style="margin: 0px; border-width: 3px">
 
-      </ul>
-  </div>
+        </ul>
+    </div>
+  <% end %>
 </div>

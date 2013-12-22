@@ -2,19 +2,25 @@
 	<div id = "section-box-one"class="well">
 		<h3 class = "section-title">Reçeteler</h3>
 		<%= render partial: "prescriptions/prescription", collection: prescriptions, as: :prescription %>
-  		<%= link_to "Reçete Ekle", new_prescription_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small add-record" if doctor_signed_in? %>
+  		<div class = "add-patient-record">
+  			<%= link_to "Reçete Ekle", new_prescription_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  		</div>
 	</div><!--well-->
 
 	<div id = "section-box-one" class="well">
 		<h3 class = "section-title">Röntgenler</h3>
 		<%= render partial: "visuals/visual", collection: visuals, as: :visual %>
-  		<%= link_to "Görsel Ekle", "#", class: "btn btn-primary btn-small add-record" if doctor_signed_in? %>
+  		<div class = "add-patient-record">
+  			<%= link_to "Görsel Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  		</div>
 	</div><!--well-->
 
 	<div id = "section-box-one" class="well">
 		<h3 class = "section-title">Aşılar</h3>
 		<%= render partial: "vaccines/vaccine", collection: vaccines, as: :vaccine %>
-  		<%= link_to "Aşı Ekle", "#", class: "btn btn-primary btn-small add-button" if doctor_signed_in? %>
+  		<div class = "add-patient-record">
+  			<%= link_to "Aşı Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  		</div>
 	</div><!--well-->
 </div>
 

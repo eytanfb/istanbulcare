@@ -19,4 +19,8 @@ class Operation < ActiveRecord::Base
   def tip
     "#{tip_second} #{tip_second}"
   end
+
+  def format_date
+    self.date.strftime("%d/%m/%Y")
+  end
 end

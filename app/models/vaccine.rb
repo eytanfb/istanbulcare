@@ -15,4 +15,9 @@
 class Vaccine < ActiveRecord::Base
   attr_accessible :date, :expiration_date, :notes, :tip
   belongs_to :patient
+  
+  def format_date
+    self.date.strftime("%d/%m/%Y")
+  end
+
 end

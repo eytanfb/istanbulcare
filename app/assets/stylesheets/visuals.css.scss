@@ -8,40 +8,54 @@
     width: 510px;
     padding-left: 4px;
     padding-right: 4px;
-    color:#dcdcdc;
+    color:black;
     font-weight: 700;
-    background-color: gray;
-    border-radius: 8px;
+
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 20px;
 }
 #general-section
 {
-    height: 880px;
-    border-style: solid;
-    border-color: red;
+    height: 600px;
 }
 #visual-type
 {
-    border-style: solid;
-    border-color: blue;
+    padding-top: 2px;
+    padding-bottom: 5px;
 }
+
+#visual-title-type
+{
+    font-size: 13pt;
+    font-weight: 400;
+}
+
 #visuals-section
 {
-    height: 700px;
+    height: 480px;
     border-style: solid;
-    border-color: green;
+    border-color: gray;
 }
 #visual-left-column
 {
     float: left;
     margin-right: 10px;
+    margin-top: 10px;
 }
 #visual-right-column
 {
+    margin-top: 30px;
     float:left;
     margin-left: 10px;
 }
 .info-title
 {
+    font-size: 14pt;
+    font-weight: 400;
+
+    float: left;
+    width: 100px;
     margin-left: 10px;
     font-weight: 600;
     font-style: italic;

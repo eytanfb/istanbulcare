@@ -22,6 +22,8 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'less-rails'
+  gem 'therubyracer'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -32,7 +34,7 @@ end
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
-gem 'bootstrap-sass', '~> 3.0.3.0'
+gem "twitter-bootstrap-rails"
 gem 'cocoon'
 
 # To use ActiveModel has_secure_password

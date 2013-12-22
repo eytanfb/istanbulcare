@@ -8,3 +8,70 @@
 		height: 30px;
 	}
 }
+
+/*Doctor view of patient*/
+
+#patient-page
+{
+  width: 800px;
+  float: right;
+  position: relative;
+  right: 30%;
+}
+
+#patient-information
+{
+  border-style: solid;
+  border-width: 2px;
+  width: inherit;
+  height: 60px;
+
+  margin-bottom: 20px;
+}
+
+.patient-info
+{
+  font-size: 15pt;
+  font-style: oblique;
+  width: 300px;
+  float: left;
+
+}
+
+.info-text
+{
+  font-size: 13pt;
+  font-weight: 600;
+  width: 300px;
+  float: left;
+}
+.record-date
+{
+  color: white;
+  border-style: solid;
+  border-color: #007BA7;
+  border-radius: 8px;
+  font-size: 12pt;
+  font-style: italic;
+  background-color: #007BA7;
+  margin-right: 15px;
+}
+
+.section-title
+{
+	color: white;
+  height: 30px; 
+  background-color: gray;
+  padding-left: 10px;
+  margin-top: 0px;
+  border-radius: 6px;
+
+}
+
+.section-box
+{
+  padding-top: 10px;
+  border-radius: 6px;
+}
+
+/*END --- Doctor view of patient*/

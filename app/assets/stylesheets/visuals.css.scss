@@ -1,3 +1,56 @@
 // Place all the styles related to the visuals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.visual-header
+{
+    text-align: center;
+    width: 510px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color:#dcdcdc;
+    font-weight: 700;
+    background-color: gray;
+    border-radius: 8px;
+}
+#general-section
+{
+    height: 880px;
+    border-style: solid;
+    border-color: red;
+}
+#visual-type
+{
+    border-style: solid;
+    border-color: blue;
+}
+#visuals-section
+{
+    height: 700px;
+    border-style: solid;
+    border-color: green;
+}
+#visual-left-column
+{
+    float: left;
+    margin-right: 10px;
+}
+#visual-right-column
+{
+    float:left;
+    margin-left: 10px;
+}
+.info-title
+{
+    margin-left: 10px;
+    font-weight: 600;
+    font-style: italic;
+}
+.visual-image
+{
+    margin-left: 10px;
+}
+#image-file
+{
+    width: 500px;
+}

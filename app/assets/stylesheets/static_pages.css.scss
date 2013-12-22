@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/*Home Page*/
+.well
+{
+  padding-top: 5px;
+  width: 350px;
+  text-align: center;
+}
+
+/*END --- Home Page*/
+
 /*Footer*/
 .footer-bar
 {
@@ -22,10 +33,12 @@
 	margin-left: 40px;
 }
 
-
-
 /*END --- Footer*/
 
+
+/* Sidebar*/
+
+/*END --- Sidebar*/
 #proper-sidebar
 {
   position: fixed;

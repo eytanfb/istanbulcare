@@ -1,5 +1,3 @@
-@import "bootstrap";
-
 body {
   padding-top: 60px;
 }
@@ -20,14 +18,22 @@ body
 }
 
 
+.home-well
+{
+  padding-top: 5px;
+  width: 400px;
+}
+
+
+
 .add-record
 {
   margin-top: 20px;
 }
 /* uncomment this section to make the sidebar un-pin*/
 .affix-top {
-	top:60px;
-    position:fixed;
+	 top:60px;
+   position:fixed;
 }
 
 .affix {
@@ -36,7 +42,7 @@ body
 
 
 .affix-top {
-	top:60px;
+	  top:60px;
     position:fixed;
 }
 

@@ -34,6 +34,7 @@ class Patient < ActiveRecord::Base
   validates_length_of :tc_no, :within => 11..11, :on => :create, :message => "11 Hane Olmalidir"
 
   has_many :prescriptions
+  has_many :visuals
   
   def full_name
     "#{self.first_name} #{self.last_name}"

@@ -16,6 +16,7 @@ Istanbulcare::Application.routes.draw do
   end
   
   match 'prescriptions/:id' => "prescriptions#show", as: :prescription
+  match 'visuals/:id' => "visuals#show", as: :visual
   
   root to: "static_pages#home"
 

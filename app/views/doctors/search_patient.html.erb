@@ -6,13 +6,5 @@
 		<div class = "patient-info"><%="#{@patient.tc_no}" %></div>
 	</div><!--patient-information-->
 
-	<div class="well section-box">
-		<h3 class = "section-title">Reçeteler</h3>
-		<%= render @prescriptions %>
-	</div><!--well-->
-
-	<div class="well section-box">
-		<h3 class = "section-title">Röntgenler</h3>
-	</div><!--well-->
+	<%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals } %>
 </div><!--patient-page-->
-

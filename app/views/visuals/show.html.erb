@@ -1,0 +1,8 @@
+<h1><%= "#{@visual.date} Tarihli Goruntu"  %></h1>
+
+<p>Turu: <%= @visual.tip %></p>
+
+<div class="visual-image">
+  <p>Goruntu:</p>
+  <p><%= image_tag @visual.image_url, size: "350x350" %></p>
+</div>

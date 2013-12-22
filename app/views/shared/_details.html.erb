@@ -19,7 +19,7 @@
 		<h3 class = "section-title">Aşılar</h3>
 		<%= render partial: "vaccines/vaccine", collection: vaccines, as: :vaccine %>
   		<div class = "add-patient-record">
-  			<%= link_to "Aşı Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  			<%= link_to "Aşı Ekle", new_vaccine_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
   		</div>
 	</div><!--well-->
   

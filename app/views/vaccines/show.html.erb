@@ -1,11 +1,11 @@
 <div id = "general-section">
-    <h1 class = "visual-header"><%= "#{@vaccine.date} Tarihli Asi" %></h1>
+    <h1 class = "visual-header"><%= "#{@vaccine.format_date} Tarihli Asi" %></h1>
     <div id = "visual-type">
         <div class = "info-title">Türü: <%= @vaccine.tip %></div>
     </div>    
     <div id="visuals-section">            
         <div id ="visual-left-column">
-            <p class = "info-title">Bitis Tarihi: <%= @vaccine.expiration_date %></p>
+            <p class = "info-title">Bitis Tarihi: <%= @vaccine.format_expiration_date %></p>
         </div>
         <div id ="visual-right-column">
              <p class = "info-title" >Açıklamalar</p>

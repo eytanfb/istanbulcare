@@ -1,11 +1,11 @@
 <div id = "general-section">
-    <h1 class = "visual-header"><%= "#{@opertion.date} Tarihli Operasyon" %></h1>
+    <h1 class = "visual-header"><%= "#{@operation.format_date} Tarihli Operasyon" %></h1>
     <div id = "visual-type">
         <div class = "info-title">Türü: <%= @operation.tip %></div>
     </div>    
     <div id="visuals-section">            
         <div id ="visual-left-column">
-            <p class = "info-title">Yapilis Tarihi: <%= @operation.date %></p>
+            <p class = "info-title">Yapilis Tarihi: <%= @operation.format_date %></p>
         </div>
         <div id ="visual-right-column">
              <p class = "info-title" >Açıklamalar</p>

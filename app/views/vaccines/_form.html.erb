@@ -1,0 +1,15 @@
+<%= simple_form_for(@vaccine, html: { class: "form-horizontal" }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= hidden_field_tag :patient_id,  "#{@patient.id}" %>
+    <%= f.input :tip, label: "Tip" %>
+    <%= f.input :date, label: "Yapilis Tarihi" %>
+    <%= f.input :expiration_date, label: "Bitis Tarihi" %>
+    <%= f.input :notes, as: :text, input_html: { cols: 52, rows: 5 } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Olustur", class: "btn btn-primary" %>
+  </div>
+<% end %>

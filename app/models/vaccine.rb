@@ -19,5 +19,9 @@ class Vaccine < ActiveRecord::Base
   def format_date
     self.date.strftime("%d/%m/%Y")
   end
+  
+  def format_expiration_date
+    self.expiration_date.strftime("%d/%m/%Y")
+  end
 
 end

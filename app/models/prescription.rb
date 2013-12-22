@@ -19,7 +19,9 @@ class Prescription < ActiveRecord::Base
   belongs_to :doctor, :class_name => "Doctor", :foreign_key => "doctor_id"
   belongs_to :patient, :class_name => "Patient", :foreign_key => "patient_id"
   
-  attr_accessible :patient_id
+  accepts_nested_attributes_for :drugs, :reject_if => :all_blank, :allow_destroy => true
+  
+  attr_accessible :patient_id, :drugs_attributes
   
   def date
     self.created_at.strftime("%d/%m/%Y")

@@ -33,7 +33,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.0.3.0'
-
+gem 'cocoon'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

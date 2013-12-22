@@ -1,7 +1,4 @@
 <h1><%= "Hastanin Adi: #{@patient.full_name}" %></h1>
 <h1><%= "Hastanin TK Kimlik Numarasi: #{@patient.tc_no}" %></h1>
 
-<h3>Receteler</h3>
-<%= render @prescriptions %>
-
-<h3>Rontgenler</h3>
+<%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals } %>

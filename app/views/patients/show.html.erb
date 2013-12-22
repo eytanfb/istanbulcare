@@ -4,5 +4,6 @@
 <%= render partial: "prescriptions/prescription", collection: @prescriptions, as: :prescription %>
 
 <h3>Rontgenler</h3>
+<%= render partial: "visuals/visual", collection: @visuals, as: :visual %>
 
 <p><%= link_to "Cikis", destroy_patient_session_path, method: :delete, class: "btn btn-primary btn-small" %></p>

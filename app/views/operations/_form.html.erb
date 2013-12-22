@@ -1,0 +1,15 @@
+<%= simple_form_for(@operation, html: { class: "form-horizontal" } ) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= hidden_field_tag :patient_id,  "#{@patient.id}" %>
+    <%= f.input :tip_first, label: "Operasyon Bolgesi" %>
+    <%= f.input :tip_second, label: "Operasyon Cesidi" %>
+    <%= f.input :date, label: "Yapilis Tarihi" %>
+    <%= f.input :notes, as: :text, input_html: { cols: 52, rows: 5 } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Olustur", class: "btn btn-primary" %>
+  </div>
+<% end %>

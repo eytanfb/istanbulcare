@@ -27,7 +27,7 @@
 		<h3 class = "section-title">Operasyonlar</h3>
 		<%= render partial: "operations/operation", collection: operations, as: :operation %>
   		<div class = "add-patient-record">
-  			<%= link_to "Operasyon Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  			<%= link_to "Operasyon Ekle", new_operation_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
   		</div>
 	</div><!--well-->
 </div>

@@ -18,6 +18,7 @@ Istanbulcare::Application.routes.draw do
   resources :prescriptions
   resources :visuals
   resources :vaccines
+  resources :operations
   match 'visuals/:id' => "visuals#show", as: :visual
   match "vaccines/:id" => "vaccines#show", as: :vaccine
   match "operations/:id" => "operations#show", as: :operation

@@ -17,6 +17,7 @@ Istanbulcare::Application.routes.draw do
   
   resources :prescriptions
   match 'visuals/:id' => "visuals#show", as: :visual
+  match "vaccines/:id" => "vaccines#show", as: :vaccine
   
   root to: "static_pages#home"
 

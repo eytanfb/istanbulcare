@@ -11,7 +11,7 @@
 		<h3 class = "section-title">Röntgenler</h3>
 		<%= render partial: "visuals/visual", collection: visuals, as: :visual %>
   		<div class = "add-patient-record">
-  			<%= link_to "Görsel Ekle", "#", class: "btn btn-primary btn-small" if doctor_signed_in? %>
+  			<%= link_to "Görsel Ekle", new_visual_path(patient_tc_no: "#{@patient.tc_no}"), class: "btn btn-primary btn-small" if doctor_signed_in? %>
   		</div>
 	</div><!--well-->
 

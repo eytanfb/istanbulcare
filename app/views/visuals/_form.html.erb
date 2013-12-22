@@ -1,0 +1,15 @@
+<%= simple_form_for(@visual, html: { class: "form-horizontal" }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= hidden_field_tag :patient_id,  "#{@patient.id}" %>
+    <%= f.input :tip, label: "Tip" %>
+    <%= f.input :image_url, label: "Gorsel URL" %>
+    <%= f.input :date %>
+    <%= f.input :notes, as: :text, input_html: { cols: 52, rows: 5 } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Olustur" %>
+  </div>
+<% end %>

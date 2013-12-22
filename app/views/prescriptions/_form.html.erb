@@ -2,10 +2,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :drugs %>
-  </div>
 
+  </div>
+  
   <div class="form-actions">
     <%= f.button :submit %>
+    <%= hidden_field_tag :tc_no, params[:patient_tc_no] %>
   </div>
 <% end %>

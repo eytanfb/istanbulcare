@@ -5,7 +5,7 @@ class PrescriptionsController < ApplicationController
   end
   
   def new
-    @prescription = current_doctor.prescription.new
+    @prescription = current_doctor.prescriptions.new
     @patient_tc_no = params[:patient_tc_no]
   end
   

@@ -7,7 +7,8 @@ class DoctorsController < ApplicationController
   end
   
   def search_patient
-    @patient = Patient.find_by_tc_no params[:patient][:tc_no]
+    tc_no = params[:patient].present? && params[:patient][:tc_no].present? ? params[:patient][:tc_no] : params[:tc_no]
+    @patient = Patient.find_by_tc_no tc_no
     @prescriptions = @patient.prescriptions
     @visuals = @patient.visuals
   end

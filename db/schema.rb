@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131221223152) do
+ActiveRecord::Schema.define(:version => 20131222001947) do
 
   create_table "doctors", :force => true do |t|
     t.string   "email"
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(:version => 20131221223152) do
 
   create_table "visuals", :force => true do |t|
     t.integer  "patient_id"
-    t.string   "type"
+    t.string   "tip"
     t.string   "image_url"
     t.date     "date"
     t.string   "notes"

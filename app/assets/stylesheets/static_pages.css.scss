@@ -1,12 +1,30 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#footer-container
+
+/*Footer*/
+.footer-bar
 {
-  width: 80%;
-  left: 10%;
-  position:bottom;
+	width: 100%;
+	position:bottom;
 }
+
+.footer-button
+{
+	margin-top: 12px;
+	margin-right: 40px;
+	right: 40%;
+}
+
+#footer-text
+{
+	float: left;
+	margin-left: 40px;
+}
+
+
+
+/*END --- Footer*/
 
 #proper-sidebar
 {

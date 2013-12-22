@@ -1,5 +1,5 @@
 <h1><%= @patient.full_name %></h1>
 
-<%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals, vaccines: @vaccines } %>
+<%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals, vaccines: @vaccines, operations: @operations } %>
 
 <p><%= link_to "Cikis", destroy_patient_session_path, method: :delete, class: "btn btn-primary btn-small" %></p>

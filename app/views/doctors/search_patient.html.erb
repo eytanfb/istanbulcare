@@ -6,5 +6,5 @@
     <div class = "patient-info"><%="#{@patient.tc_no}" %></div>
   </div><!--patient-information-->
 
-  <%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals, vaccines: @vaccines } %>
+  <%= render partial: "shared/details", locals: { prescriptions: @prescriptions, visuals: @visuals, vaccines: @vaccines, operations: @operations } %>
 </div><!--patient-page-->

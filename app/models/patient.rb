@@ -36,6 +36,7 @@ class Patient < ActiveRecord::Base
   has_many :prescriptions
   has_many :visuals
   has_many :vaccines
+  has_many :operations
 
   def full_name
     "#{self.first_name} #{self.last_name}"

@@ -1,13 +1,12 @@
 @import "bootstrap";
 
-@mixin box_sizing{
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
   padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
 }
 
 html
@@ -19,190 +18,12 @@ body
 {
   min-height: 100%;
 }
-/*Visuals Section Detailed View*/
-h1
-{
-    text-align: center;
-    width: 510px;
-    padding-left: 4px;
-    padding-right: 4px;
-    color:#dcdcdc;
-    font-weight: 700;
-    background-color: gray;
-    border-radius: 8px;
-}
-#general-section
-{
-    height: 880px;
-    border-style: solid;
-    border-color: red;
-}
-#visual-type
-{
-    border-style: solid;
-    border-color: blue;
-}
-#visuals-section
-{
-    height: 700px;
-    border-style: solid;
-    border-color: green;
-}
-#visual-left-column
-{
-    float: left;
-    margin-right: 10px;
-}
-#visual-right-column
-{
-    float:left;
-    margin-left: 10px;
-}
-.info-title
-{
-    margin-left: 10px;
-    font-weight: 600;
-    font-style: italic;
-}
-.visual-image
-{
-    margin-left: 10px;
-}
-#image-file
-{
-    width: 500px;
-}
-/*END -- Visuals Section Detailed View*/
 
-/*Doctor view of patient*/
 
-#patient-page
+.add-record
 {
-  width: 800px;
-  margin-right: 50px;
-  position: relative;
-  right: 30%;
+  margin-top: 20px;
 }
-
-#patient-information
-{
-  border-style: solid;
-  border-width: 2px;
-  width: inherit;
-  height: 60px;
-
-  margin-bottom: 20px;
-}
-
-.patient-info
-{
-  font-size: 15pt;
-  font-style: oblique;
-  width: 300px;
-  float: left;
-
-}
-
-.info-text
-{
-  font-size: 13pt;
-  font-weight: 600;
-  width: 300px;
-  float: left;
-}
-.record-date
-{
-  color: white;
-  border-style: solid;
-  border-color: #007BA7;
-  border-radius: 8px;
-  font-size: 12pt;
-  font-style: italic;
-  background-color: #007BA7;
-  margin-right: 15px;
-}
-
-.section-title
-{
-  background-color: gray;
-  padding-left: 10px;
-  margin-top: 0px;
-  border-radius: 6px;
-
-}
-
-.section-box
-{
-  padding-top: 10px;
-  border-radius: 6px;
-}
-
-/*END --- Doctor view of patient*/
-
-#footer-container
-{
-  width: 80%;
-  left: 10%;
-  position:bottom;
-}
-
-#proper-sidebar
-{
-  position: fixed;
-  left: 10px;
-  margin-top: 45px;
-}
-
-.form-actions
-{
-  background-color: white;
-  border-style: none;
-  margin-left: 50px;
-}
-
-#sign-in-button
-{
-  margin-left: 40px;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-#contact-button
-{
-  float: right;
-}
-
-#user-name
-{
-  font-size: 15pt;
-  color: white;
-  float: right;
-  padding-top: 0px;
-
-}
-
-#username-nav-item
-{
-    float: right;
-    margin-right: 50px;
-
-}
-
-#exit-nav-item
-{
-    float: right;
-}
-
-.nav
-{
-  width: 83%;
-}
-
-.short-form
-{
-  margin-top: 40px;
-}
-
 /* uncomment this section to make the sidebar un-pin*/
 .affix-top {
 	top:60px;

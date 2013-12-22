@@ -10,11 +10,13 @@ body {
 html
 {
   height: 100%;
+
 }
 
 body
 {
   min-height: 100%;
+  overflow-y: auto;
 }
 
 /* uncomment this section to make the sidebar un-pin*/

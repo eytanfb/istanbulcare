@@ -1,7 +1,18 @@
-<h1><%= "Hastanin Adi: #{@patient.full_name}" %></h1>
-<h1><%= "Hastanin TK Kimlik Numarasi: #{@patient.tc_no}" %></h1>
+<div id = "patient-page">
+	<div id = "patient-information">
+		<div class = "info-text">Hastanin Adi: </div> 
+		<div class = "patient-info"><%="#{@patient.full_name}" %></div> 
+		<div class = "info-text">Hastanin TC Kimlik Numarasi:</div> 
+		<div class = "patient-info"><%="#{@patient.tc_no}" %></div>
+	</div><!--patient-information-->
 
-<h3>Receteler</h3>
-<%= render @prescriptions %>
+	<div class="well section-box">
+		<h3 class = "section-title">Reçeteler</h3>
+		<%= render @prescriptions %>
+	</div><!--well-->
 
-<h3>Rontgenler</h3>
+	<div class="well section-box">
+		<h3 class = "section-title">Röntgenler</h3>
+	</div><!--well-->
+</div><!--patient-page-->
+
